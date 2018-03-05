@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<![endif]-->
+		<script>
+		document.documentElement.className = 'js';
+		</script>
+	</head>
+	<body class="demo-1">
+		
+		<main>
+			
+			<!-- Initial markup -->
+			<div class="segmenter" style="background-image: url(img/1.jpg)"></div>
+			<h2 class="trigger-headline trigger-headline--hidden">
+				<span>M</span>
+				<span>o</span>
+				<span>t</span>
+				<span>i</span>
+				<span>o</span>
+				<span>n</span>
+			</h2>
+			<div class="bottom-nav">
+				<button class="btn btn--trigger btn--hidden">Show Effect</button>
+				
+			</div>
+		</main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			var headline = document.querySelector('.trigger-headline'),
+				trigger = document.querySelector('.btn--trigger'),
+				segmenter = new Segmenter(document.querySelector('.segmenter'), {
+					onReady: function() {
+						trigger.classList.remove('btn--hidden');
+						trigger.addEventListener('click', function() {
+							segmenter.animate();
+							headline.classList.remove('trigger-headline--hidden');
+							this.classList.add('btn--hidden');
+						});
+					}
+				});
+		})();
+		</script>
+	</body>
+</html>
