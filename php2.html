@@ -352,58 +352,6 @@
 		   </div>         
         </div>
     </section>
-    
-
-<!---------------------------------------------------------------------------------  
------------------------------------------------------------------------------------ 
- 
-        Implementación Practica Dos caminos posibles
-
------------------------------------------------------------------------------------
----------------------------------------------------------------------------------->  
-
-	
-    <section id="div_7" class="contact"  style="margin-bottom: 300px">
-        <div class="row">
-        	<div class="col-md-12 text-center">
-            	<div class="about_title">
-                	<h2>Implementación Practica</h2>
-                    <img src="brandy/images/shape.png" alt="">
-				</div>
-			</div>
-		</div>
-		<div class="container">
-            <div class="row">
-				<div class="col-md-4 no_padding">
-					<div class="single_image" style="margin: 46px;">
-	                    <img src="img/app-0.png" alt=""  class="wow fadeInRightBig" data-wow-delay="1s">
-	                    <div class="image_overlay">
-	                        <a href="">RFID</a>
-	                    	<h4>Tarjetas</h4>
-	                	</div>
-	            	</div>
-				</div>
-				<div class="col-md-4 no_padding">
-					<div class="single_image" style="margin: 46px;">
-	                    <img src="img/app-1.png" alt="" class="wow fadeInUp" data-wow-delay="2s">
-	                    <div class="image_overlay">
-	                        <a href="">RFID</a>
-	                    	<h4>Tarjetas</h4>
-	                	</div>
-	            	</div>
-				</div>
-				<div class="col-md-4 no_padding">
-					<div class="single_image" style="margin: 46px;">
-	                    <img src="img/app-2.png" alt="" class="wow fadeInLeftBig" data-wow-delay="3s">
-	                    <div class="image_overlay">
-	                        <a href="">RFID</a>
-	                    	<h4>Tarjetas</h4>
-	                	</div>
-	            	</div>
-				</div>
-	       </div>            
-        </div>
-    </section>
 
 
 <!---------------------------------------------------------------------------------  
@@ -464,9 +412,10 @@
 <script>
 	var div = 1;
 	var img_number = 1;
-	var classSlider = 'fadeInRightBig';
 	$(document).bind('keyup', function(e) 
 	{
+		
+		
 		console.log('div');
 		console.log(div);
 			
@@ -474,22 +423,20 @@
 		{
 			if(e.which == 39 || e.which == 40){
 				img_number = img_number + 1;
-				classSlider = 'fadeInRightBig';
 			}else{ 
 				img_number = img_number - 1;
-				classSlider = 'fadeInLeftBig';
 			}
 			console.log('img_number');
 			console.log(img_number);
 			
 			if(img_number == 1){
-				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/tambos_sectores.png" alt="" class="wow '+classSlider+'">');
+				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/tambos_sectores.png" alt="" class="wow fadeInRightBig" data-wow-delay="1s">');
 			}else if(img_number == 2){
-				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/tambos_dispositivos.png" alt="" class="wow '+classSlider+'">');
+				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/tambos_dispositivos.png" alt="" class="wow fadeInRightBig" data-wow-delay="1s">');
        		}else if(img_number == 3){
-				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/animales_caminos.png" alt="" class="wow '+classSlider+'">');
+				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/animales_caminos.png" alt="" class="wow fadeInRightBig" data-wow-delay="1s">');
        		}else if(img_number == 4){
-				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/animales_rutinas.png" alt="" class="wow '+classSlider+'">');
+				$('#img_pantallas').replaceWith('<img id="img_pantallas" src="img/animales_caminos.png" alt="" class="wow fadeInRightBig" data-wow-delay="1s">');
        		}else if(img_number == 5){
        			div = div + 1;
        			$("html, body").animate({ scrollTop: $("#div_"+div).offset().top }, 1000);
